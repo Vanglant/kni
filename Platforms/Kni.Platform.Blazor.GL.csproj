@@ -14,9 +14,9 @@
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <LangVersion>Default</LangVersion>
-    <IsTrimmable Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">true</IsTrimmable>
+    <IsTrimmable Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net10.0'))">true</IsTrimmable>
     <AssemblyName>Kni.Platform</AssemblyName>
     <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
     <DefineConstants>$(DefineConstants);BLAZORGL;STBSHARP_INTERNAL</DefineConstants>
@@ -37,6 +37,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\wasm\Wasm.Audio\Wasm.Audio.csproj" />
+    <ProjectReference Include="..\..\wasm\Wasm.Canvas\Wasm.Canvas.csproj" />
+    <ProjectReference Include="..\..\wasm\Wasm.Clipboard\Wasm.Clipboard.csproj" />
+    <ProjectReference Include="..\..\wasm\Wasm.Dom\Wasm.Dom.csproj" />
+    <ProjectReference Include="..\..\wasm\Wasm.JSInterop\Wasm.JSInterop.csproj" />
+    <ProjectReference Include="..\..\wasm\Wasm.XHR\Wasm.XHR.csproj" />
+    <ProjectReference Include="..\..\wasm\Wasm.XR\Wasm.XR.csproj" />
     <ProjectReference Include="..\src\Xna.Framework\Xna.Framework.csproj">
       <Project>{741B4B1E-89E4-434C-8867-6129838AFD51}</Project>
       <Name>Xna.Framework</Name>
@@ -87,6 +94,8 @@
       <Name>Xna.Framework.XR</Name>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="..\ThirdParty\StbImageSharp\src\StbImageSharp.csproj" />
+    <ProjectReference Include="..\ThirdParty\StbImageWriteSharp\src\StbImageWriteSharp.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -155,11 +164,6 @@
     <Compile Include="Graphics\.Common\SpriteBatcher.cs" />
   </ItemGroup>
 
-  <ItemGroup>        
-    <Compile Include="..\ThirdParty\StbImageSharp\src\**\*.cs" LinkBase="Utilities\StbImageSharp" />
-    <Compile Include="..\ThirdParty\StbImageWriteSharp\src\**\*.cs" LinkBase="Utilities\StbImageWriteSharp" />
-  </ItemGroup>
-
   <ItemGroup>
     <Compile Include="Input\.Blazor\Touch\ConcreteTouchPanel.cs" />
     <Compile Include="Input\.Blazor\XR\ConcreteTouchController.cs" />
@@ -223,15 +227,6 @@
     <EmbeddedResource Include="Graphics\Effect\Resources\SpriteEffect.gles.fxo">
       <LogicalName>Resources.SpriteEffect.fxo</LogicalName>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="nkast.Wasm.JSInterop" Version="8.0.11"  />
-    <PackageReference Include="nkast.Wasm.Audio" Version="8.0.11"  />
-    <PackageReference Include="nkast.Wasm.Canvas" Version="8.0.11"  />
-    <PackageReference Include="nkast.Wasm.Dom" Version="8.0.11"  />
-    <PackageReference Include="nkast.Wasm.XHR" Version="8.0.11"  />
-    <PackageReference Include="nkast.Wasm.XR" Version="8.0.11"  />
   </ItemGroup>
 
 </Project>
