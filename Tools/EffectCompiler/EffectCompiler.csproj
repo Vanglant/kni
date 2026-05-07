@@ -8,7 +8,7 @@
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-    <TargetFrameworks>net48;net8.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <ProjectGuid>{46474D32-2E58-6957-6E64-6F7773324D47}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>EffectCompiler</RootNamespace>
@@ -21,18 +21,18 @@
     <DefineConstants>$(DefineConstants);WINDOWSDX</DefineConstants>
     <LangVersion>7.3</LangVersion>
     <ApplicationIcon>App.ico</ApplicationIcon>
+    <!-- <PublishAOT>true</PublishAOT> -->
   </PropertyGroup>
-	
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
   </PropertyGroup>
-	
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="CommandLineParser.cs" />
     <Compile Include="BuildLogger.cs" />

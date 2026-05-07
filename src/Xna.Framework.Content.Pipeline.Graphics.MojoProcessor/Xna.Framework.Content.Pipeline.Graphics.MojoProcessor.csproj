@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <BaseOutputPath>..\..\Artifacts\Xna.Framework.Content.Pipeline.Graphics.MojoProcessor\</BaseOutputPath>
-    
+
     <Version>4.2.9001.0</Version>
     <AssemblyVersion>4.2.9001.0</AssemblyVersion>
 
@@ -10,7 +10,7 @@
 
   <PropertyGroup>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <TargetFrameworks>net40;netstandard2.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <LangVersion>7.3</LangVersion>
     <AssemblyName>Xna.Framework.Content.Pipeline.Graphics.MojoProcessor</AssemblyName>
     <RootNamespace>Microsoft.Xna.Framework.Content.Pipeline.Graphics</RootNamespace>
@@ -26,12 +26,12 @@
     </Reference>
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net8.0' ">
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net10.0' ">
     <Reference Include="CppNet">
       <HintPath>..\..\ThirdParty\CppNet\net40\CppNet.dll</HintPath>
     </Reference>
   </ItemGroup>
-	
+
   <ItemGroup>
     <PackageReference Version="4.2.0" Include="SharpDX" />
     <PackageReference Version="4.2.0" Include="SharpDX.D3DCompiler" />
@@ -40,7 +40,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Processors\EffectProcessor.cs" />
     <Compile Include="Processors\EffectProcessorDebugMode.cs" />

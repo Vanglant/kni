@@ -3,7 +3,7 @@
   <Import Project="..\..\kniPackage.props" />
   <PropertyGroup>
     <BaseOutputPath>..\..\Artifacts\Xna.Framework.Media\</BaseOutputPath>
-    
+
     <Version>4.2.9001.0</Version>
     <AssemblyVersion>4.2.9001.0</AssemblyVersion>
 
@@ -12,7 +12,7 @@
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <TargetFrameworks>net40;netstandard2.0;net10.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <LangVersion>7.3</LangVersion>
     <IsTrimmable Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net10.0'))">true</IsTrimmable>
     <ProjectGuid>{6E0E6284-13FF-4DC7-8FC2-B6D756EAF1FD}</ProjectGuid>
@@ -32,11 +32,11 @@
       <LogicalName>ILLink.Descriptors.xml</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
-	
+
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Content\SongReader.cs" />
     <Compile Include="Content\VideoReader.cs" />
@@ -87,7 +87,7 @@
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

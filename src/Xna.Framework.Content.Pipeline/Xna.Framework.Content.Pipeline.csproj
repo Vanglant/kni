@@ -3,7 +3,7 @@
   <Import Project="..\..\kniPackage.props" />
   <PropertyGroup>
     <BaseOutputPath>..\..\Artifacts\Xna.Framework.Content.Pipeline\</BaseOutputPath>
-    
+
     <Version>4.2.9001.0</Version>
     <AssemblyVersion>4.2.9001.0</AssemblyVersion>
 
@@ -11,7 +11,7 @@
 
   <PropertyGroup>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <TargetFrameworks>net40;netstandard2.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <LangVersion>7.3</LangVersion>
     <AssemblyName>Xna.Framework.Content.Pipeline</AssemblyName>
     <RootNamespace>Microsoft.Xna.Framework.Content.Pipeline</RootNamespace>
@@ -27,12 +27,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Processors\PassThroughProcessor.cs" />
     <Compile Include="XmlImporter.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Serialization\Compiler\ArrayWriter.cs" />
     <Compile Include="Serialization\Compiler\ContentTypeWriterBase.cs" />
@@ -49,7 +49,7 @@
     <Compile Include="Serialization\Compiler\NullableWriter.cs" />
     <Compile Include="Serialization\Compiler\ReflectiveWriter.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Serialization\Intermediate\ArraySerializer.cs" />
     <Compile Include="Serialization\Intermediate\ContentTypeSerializer.cs" />
@@ -71,8 +71,8 @@
     <Compile Include="Serialization\Intermediate\PackedElementsHelper.cs" />
     <Compile Include="Serialization\Intermediate\ReflectiveSerializer.cs" />
   </ItemGroup>
-  
-  
+
+
   <ItemGroup>
     <Compile Include="Serialization\Compiler\BooleanWriter.cs" />
     <Compile Include="Serialization\Compiler\ByteWriter.cs" />
@@ -92,7 +92,7 @@
     <Compile Include="Serialization\Compiler\UInt32Writer.cs" />
     <Compile Include="Serialization\Compiler\UInt64Writer.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Serialization\Intermediate\BoolSerializer.cs" />
     <Compile Include="Serialization\Intermediate\ByteSerializer.cs" />
@@ -109,8 +109,8 @@
     <Compile Include="Serialization\Intermediate\ULongSerializer.cs" />
     <Compile Include="Serialization\Intermediate\UShortSerializer.cs" />
   </ItemGroup>
-    
-  
+
+
   <ItemGroup>
     <Compile Include="Serialization\Compiler\BoundingBoxWriter.cs" />
     <Compile Include="Serialization\Compiler\BoundingFrustumWriter.cs" />
@@ -127,7 +127,7 @@
     <Compile Include="Serialization\Compiler\Vector3Writer.cs" />
     <Compile Include="Serialization\Compiler\Vector4Writer.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Serialization\Intermediate\ColorSerializer.cs" />
     <Compile Include="Serialization\Intermediate\CurveKeyCollectionSerializer.cs" />
@@ -140,8 +140,8 @@
     <Compile Include="Serialization\Intermediate\Vector3Serializer.cs" />
     <Compile Include="Serialization\Intermediate\Vector4Serializer.cs" />
   </ItemGroup>
-  
-  
+
+
   <ItemGroup>
     <Compile Include="ChildCollection.cs" />
     <Compile Include="ContentBuildLogger.cs" />
@@ -165,7 +165,7 @@
     <Compile Include="ProcessorParameterCollection.cs" />
     <Compile Include="TargetPlatform.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Utilities\LZ4\LZ4Codec.cs" />
     <Compile Include="Utilities\LZ4\LZ4Codec.Unsafe.cs" />

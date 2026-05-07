@@ -3,7 +3,7 @@
   <Import Project="..\..\kniPackage.props" />
   <PropertyGroup>
     <BaseOutputPath>..\..\Artifacts\Xna.Framework.Content\</BaseOutputPath>
-    
+
     <Version>4.2.9001.0</Version>
     <AssemblyVersion>4.2.9001.0</AssemblyVersion>
 
@@ -12,7 +12,7 @@
   <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <TargetFrameworks>net40;netstandard2.0;net10.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <LangVersion>7.3</LangVersion>
     <IsTrimmable Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net10.0'))">true</IsTrimmable>
     <ProjectGuid>{1DC4C439-A8A6-4A11-AB3B-A88DCBA05449}</ProjectGuid>
@@ -32,12 +32,12 @@
       <LogicalName>ILLink.Descriptors.xml</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
-	
+
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NamespaceDoc.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Content\ContentReaders\ArrayReader.cs" />
     <Compile Include="Content\ContentReaders\BooleanReader.cs" />
@@ -120,7 +120,7 @@
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

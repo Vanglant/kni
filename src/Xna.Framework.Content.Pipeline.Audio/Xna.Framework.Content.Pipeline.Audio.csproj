@@ -3,7 +3,7 @@
   <Import Project="..\..\kniPackage.props" />
   <PropertyGroup>
     <BaseOutputPath>..\..\Artifacts\Xna.Framework.Content.Pipeline.Audio\</BaseOutputPath>
-    
+
     <Version>4.2.9001.0</Version>
     <AssemblyVersion>4.2.9001.0</AssemblyVersion>
 
@@ -11,7 +11,7 @@
 
   <PropertyGroup>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <TargetFrameworks>net40;netstandard2.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <LangVersion>7.3</LangVersion>
     <AssemblyName>Xna.Framework.Content.Pipeline.Audio</AssemblyName>
     <RootNamespace>Microsoft.Xna.Framework.Content.Pipeline.Audio</RootNamespace>
@@ -27,7 +27,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Audio\AudioContent.cs" />
     <Compile Include="Audio\AudioFileType.cs" />
@@ -35,16 +35,16 @@
     <Compile Include="Audio\ConversionFormat.cs" />
     <Compile Include="Audio\ConversionQuality.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Processors\SoundEffectContent.cs" />
     <Compile Include="Processors\SoundEffectProcessor.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Serialization\Compiler\SoundEffectWriter.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Mp3Importer.cs" />
     <Compile Include="OggImporter.cs" />

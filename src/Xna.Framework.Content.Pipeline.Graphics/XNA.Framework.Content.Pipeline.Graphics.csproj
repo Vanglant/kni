@@ -3,7 +3,7 @@
   <Import Project="..\..\kniPackage.props" />
   <PropertyGroup>
     <BaseOutputPath>..\..\Artifacts\Xna.Framework.Content.Pipeline.Graphics\</BaseOutputPath>
-    
+
     <Version>4.2.9001.0</Version>
     <AssemblyVersion>4.2.9001.0</AssemblyVersion>
 
@@ -11,7 +11,7 @@
 
   <PropertyGroup>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <TargetFrameworks>net40;netstandard2.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <LangVersion>7.3</LangVersion>
     <AssemblyName>Xna.Framework.Content.Pipeline.Graphics</AssemblyName>
     <RootNamespace>Microsoft.Xna.Framework.Content.Pipeline.Graphics</RootNamespace>
@@ -24,7 +24,7 @@
     <PackageId>nkast.Xna.Framework.Content.Pipeline.Graphics</PackageId>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net8.0' ">
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net10.0' ">
     <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
   </ItemGroup>
 
@@ -42,8 +42,8 @@
       <HintPath>..\..\ThirdParty\PVRTexLibNET\PVRTexLibNET.dll</HintPath>
     </Reference>
   </ItemGroup>
-  
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net8.0' ">
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net10.0' ">
     <Reference Include="AssimpNet">
       <HintPath>..\..\ThirdParty\AssimpNet\5.0.0\lib\netstandard2.0\AssimpNet.dll</HintPath>
     </Reference>
@@ -57,9 +57,9 @@
       <HintPath>..\..\ThirdParty\Dependencies\PVRTexLibNET\PVRTexLibNET.dll</HintPath>
     </Reference>
   </ItemGroup>
-  
+
   <ItemGroup>
-    <Reference Include="Nvidia.TextureTools" Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net8.0' ">
+    <Reference Include="Nvidia.TextureTools" Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net10.0' ">
       <HintPath>..\..\ThirdParty\Dependencies\NVTT\lib\\netstandard2.0\Nvidia.TextureTools.dll</HintPath>
     </Reference>
     <Reference Include="Nvidia.TextureTools" Condition="'$(TargetFramework)' == 'net40' ">
@@ -73,7 +73,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="EffectCompiler\SamplerStateContent.cs" />
     <Compile Include="EffectCompiler\TPGParser\Parser.cs" />
@@ -85,7 +85,7 @@
     <Compile Include="EffectCompiler\TPGParser\ShaderInfo.cs" />
     <Compile Include="EffectCompiler\TPGParser\TechniqueInfo.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Graphics\Font\CharacterRegion.cs" />
     <Compile Include="Graphics\Font\CharacterRegionTypeConverter.cs" />
@@ -96,7 +96,7 @@
     <Compile Include="Graphics\Font\MaxRectsBin.cs" />
     <Compile Include="Graphics\Font\MaxRectsHeuristic.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Graphics\AlphaTestMaterialContent.cs" />
     <Compile Include="Graphics\AnimationChannel.cs" />
@@ -179,7 +179,7 @@
     <Compile Include="Processors\VertexBufferContent.cs" />
     <Compile Include="Processors\VertexDeclarationContent.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="Serialization\Compiler\AlphaTestEffectWriter.cs" />
     <Compile Include="Serialization\Compiler\BasicEffectWriter.cs" />
@@ -198,7 +198,7 @@
     <Compile Include="Serialization\Compiler\VertexBufferWriter.cs" />
     <Compile Include="Serialization\Compiler\VertexDeclarationWriter.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="DdsLoader.cs" />
     <Compile Include="EffectImporter.cs" />
@@ -214,12 +214,12 @@
     <Compile Include="Utilities\ReflectionHelpers.cs" />
     <Compile Include="Utilities\VectorConverterEx.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="ExternalTool.cs" />
     <Compile Include="Serialization\Compiler\ContentTypeWriterBase.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="..\..\Platforms\Utilities\CurrentPlatform.cs">
       <Link>Utilities\CurrentPlatform.cs</Link>
@@ -243,7 +243,7 @@
       <NativeBinary>True</NativeBinary>
     </None>
   </ItemGroup>
-    
+
   <ItemGroup Condition="'$(TargetFramework)' == 'net40' ">
     <None Include="..\..\ThirdParty\SharpFont\Windows\x64\freetype6.dll">
       <Link>freetype6.dll</Link>
@@ -261,8 +261,8 @@
       <NativeBinary>True</NativeBinary>
     </None>
   </ItemGroup>
-  
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net8.0' ">
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net10.0' ">
     <None Include="..\..\ThirdParty\Dependencies\SharpFont\x64\freetype6.dll">
       <Link>freetype6.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
